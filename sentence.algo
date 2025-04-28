@@ -1,0 +1,28 @@
+1. Start
+2. Initialize lengthCounter = 0
+3. Initialize wordCounter = 0
+4. Initialize vowelCounter = 0
+5. Initialize isWord = False  // A flag to track whether we're inside a word
+
+6. Input sentence (it ends with a period)
+7. FOR each character c in the sentence DO
+    a. Increment lengthCounter by 1 (to count the current character)
+    
+    b. IF c is a vowel (i.e., 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U') THEN
+        i. Increment vowelCounter by 1
+    END IF
+    
+    c. IF c is not a space AND isWord is False THEN
+        i. Increment wordCounter by 1 (indicates the start of a new word)
+        ii. Set isWord = True (we're now inside a word)
+    ELSE IF c is a space THEN
+        i. Set isWord = False (we've reached the end of a word)
+    END IF
+8. END FOR
+
+9. Output the following:
+    a. Length of the sentence: lengthCounter
+    b. Number of words: wordCounter
+    c. Number of vowels: vowelCounter
+
+10. End
